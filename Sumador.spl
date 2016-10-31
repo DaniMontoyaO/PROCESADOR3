@@ -1,0 +1,6 @@
+[Inputs]
+=Incremento[31:0]=
+=Direccion[31:0]=
+[Outputs]
+=NuevaDireccion[31:0]=
+[BiDir]

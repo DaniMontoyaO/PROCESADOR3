@@ -1,0 +1,1 @@
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/SEU.vhi -module SEU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work SEU.vhd 

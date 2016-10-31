@@ -1,0 +1,3 @@
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/RF.vhi -module RF -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RF.vhd 
+vhdtdtfi -lib work RF.vhd -prj Procesador -o RF.spl -module RF -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e RF.spl D:/Biblioteca/Documents/Procesador/Procesador32/RF.sym 

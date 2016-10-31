@@ -1,0 +1,2 @@
+vhdl isim_temp "RF.vhd"
+vhdl isim_temp "RFTB.vhd"

@@ -1,0 +1,10 @@
+[Inputs]
+rst
+=Rs1[4:0]=
+=Rs2[4:0]=
+=Rsd[4:0]=
+=datawrite[31:0]=
+[Outputs]
+=CRs1[31:0]=
+=CRs2[31:0]=
+[BiDir]

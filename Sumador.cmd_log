@@ -1,0 +1,19 @@
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -lib work Sumador.vhd -prj Procesador -o Sumador.spl -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan3e Sumador.spl D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.sym 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -lib work Sumador.vhd -prj Procesador -o Sumador.spl -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Sumador.spl D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.sym 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.tfi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work Sumador.vhd 
+xst -intstyle ise -ifn "D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.xst" -ofn "D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-vq100-4 Sumador.ngc Sumador.ngd  
+map -intstyle ise -p xc3s100e-vq100-4 -cm area -ir off -pr off -c 100 -o Sumador_map.ncd Sumador.ngd Sumador.pcf 
+netgen -intstyle ise -ar Structure -tm Sumador -w -dir netgen/synthesis -ofmt vhdl -sim Sumador.ngc Sumador_synthesis.vhd 
+vhdtdtfi -lib work Sumador.vhd -prj Procesador -o Sumador.spl -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Sumador.spl D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.sym 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.vhi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Sumador.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/Sumador.vhi -module Sumador -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Sumador.vhd 
