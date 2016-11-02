@@ -1,0 +1,37 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/final/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to E:/final/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/final/UC.vhd" in Library work.
+Entity <uc> compiled.
+ERROR:HDLParsers:3312 - "E:/final/UC.vhd" Line 111. Undefined symbol 'salida_UC'.
+ERROR:HDLParsers:1209 - "E:/final/UC.vhd" Line 114. salida_UC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:811 - "E:/final/UC.vhd" Line 110. Choice 010011 duplicated in case.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> 
+
+Total memory usage is 212908 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
