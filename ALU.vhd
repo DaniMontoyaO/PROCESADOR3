@@ -34,6 +34,7 @@ entity ALU is
 	Port ( Crs1 : in  STD_LOGIC_VECTOR (31 downto 0);
           Crs2 : in  STD_LOGIC_VECTOR (31 downto 0);
           ALU_Op : in STD_LOGIC_VECTOR (5 downto 0);
+			 carry : in STD_LOGIC_VECTOR ;
 			 ALU_Out : out STD_LOGIC_VECTOR (31 downto 0));
 end ALU;
 
@@ -41,7 +42,7 @@ architecture Behavioral of ALU is
 
 begin
 
-process(Crs1,Crs2,ALU_Op)
+process(Crs1,Crs2,ALU_Op,carry)
 		begin
 			case (ALU_Op) is 
 				when "000000" => --add
