@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file MUX.vhd -- 23:41:55 04/25/2016
+-- VHDL Instantiation Created from source file MUX.vhd -- 18:06:13 10/17/2016
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,18 +8,18 @@
 
 	COMPONENT MUX
 	PORT(
-		RfToMux : IN std_logic_vector(31 downto 0);
-		inm : IN std_logic;
-		seuToMux : IN std_logic_vector(31 downto 0);          
-		MuxToAlu : OUT std_logic_vector(31 downto 0)
+		ENTRADA_CRS2 : IN std_logic_vector(31 downto 0);
+		ENTRADA_SEU : IN std_logic_vector(31 downto 0);
+		i : IN std_logic;          
+		SALIDA_MUX : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
 
 	Inst_MUX: MUX PORT MAP(
-		RfToMux => ,
-		inm => ,
-		seuToMux => ,
-		MuxToAlu => 
+		ENTRADA_CRS2 => ,
+		ENTRADA_SEU => ,
+		i => ,
+		SALIDA_MUX => 
 	);
 
 

@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    00:03:51 04/23/2016 
+-- Create Date:    12:14:35 09/30/2016 
 -- Design Name: 
 -- Module Name:    PC - Behavioral 
 -- Project Name: 
@@ -30,25 +30,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PC is
-    Port ( SalidaNpc : in  STD_LOGIC_VECTOR (31 downto 0);
-           Clock : in  STD_LOGIC;
-           Reset : in  STD_LOGIC;
-           SalidaPc : out  STD_LOGIC_VECTOR (31 downto 0));
+ Port ( ENTRADA_NPC : in  STD_LOGIC_VECTOR (31 downto 0);
+        CLK: in  STD_LOGIC;
+		  RST: in  STD_LOGIC;
+        SALIDA_PC : out  STD_LOGIC_VECTOR (31 downto 0));
 end PC;
 
 architecture Behavioral of PC is
 
 begin
-process(Clock, SalidaNpc, Reset)
-	begin
-		if(Reset = '1')then 
-			SalidaPc <= x"00000000";
-		else
-			if(rising_edge(clock))then
-				SalidaPc <= SalidaNpc;
+	process (CLK, ENTRADA_NPC,RST)
+		begin
+		if (rising_edge(CLK)) then
+				if ( RST ='1') then
+	          SALIDA_PC <= "00000000000000000000000000000000";
+			else 
+				 SALIDA_PC <= ENTRADA_NPC;
+				end if;
 			end if;
-		end if;
 	end process;
-
 end Behavioral;
 

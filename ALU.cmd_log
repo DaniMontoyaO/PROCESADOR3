@@ -1,1 +1,7 @@
-vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/ALU.vhi -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ALU.vhd 
+vhdtdtfi -prj ProcesadorMonociclo -o "E:/Mis Documentos/Escritorio/ProcesadorMonocicloterminar/ALU.vhi" -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ALU.vhd 
+vhdtdtfi -lib work ALU.vhd -prj ProcesadorMonociclo -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ALU.spl {E:/Mis Documentos/Escritorio/ProcesadorMonocicloterminar/ALU.sym} 
+vhdtdtfi -lib work ALU.vhd -prj ProcesadorMonociclo -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ALU.spl {E:/Mis Documentos/Escritorio/ProcesadorMonocicloterminar/ALU.sym} 
+vhdtdtfi -prj ProcesadorMonociclo -o C:/Users/Propietario_/Arquitectura-de-Computadores/ProcesadorMonociclo3/ALU.vhi -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ALU.vhd 
+vhdtdtfi -prj ProcesadorMonociclo -o C:/Users/Propietario_/Arquitectura-de-Computadores/ProcesadorMonociclo3/ALU.vhi -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ALU.vhd 

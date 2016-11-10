@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file PSR.vhd -- 16:53:11 10/31/2016
+-- VHDL Instantiation Created from source file PSR.vhd -- 17:52:17 11/01/2016
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,18 +8,18 @@
 
 	COMPONENT PSR
 	PORT(
-		nzvc : IN std_logic_vector(3 downto 0);
-		reset : IN std_logic;
-		clk : IN std_logic;          
-		carry : OUT std_logic
+		ENTRADA_NZVC : IN std_logic_vector(3 downto 0);
+		RST : IN std_logic;
+		CLK : IN std_logic;          
+		CARRY : OUT std_logic
 		);
 	END COMPONENT;
 
 	Inst_PSR: PSR PORT MAP(
-		nzvc => ,
-		reset => ,
-		clk => ,
-		carry => 
+		ENTRADA_NZVC => ,
+		RST => ,
+		CLK => ,
+		CARRY => 
 	);
 
 

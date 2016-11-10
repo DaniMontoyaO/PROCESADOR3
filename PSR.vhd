@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:48:18 10/31/2016 
+-- Create Date:    14:43:04 10/30/2016 
 -- Design Name: 
 -- Module Name:    PSR - Behavioral 
 -- Project Name: 
@@ -30,26 +30,25 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PSR is
-    Port ( nzvc : in  STD_LOGIC_VECTOR (3 downto 0);
-           reset : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
-           carry : out  STD_LOGIC);
+    Port ( ENTRADA_NZVC : in  STD_LOGIC_VECTOR (3 downto 0);
+           RST : in  STD_LOGIC;
+           CLK : in  STD_LOGIC;
+           CARRY : out  STD_LOGIC);
 end PSR;
 
 architecture Behavioral of PSR is
 
 begin
-     process(reset,clk,nzvc)
-	  begin
-	      if reset='1' then
-			   carry <= '0';
-		   else
-			   if rising_edge(clk) then
-				   carry<=nzvc(0);
-			   end if;
-		   end if;
-	  end process;
-	     
-
+	process(ENTRADA_NZVC,RST,CLK)
+	begin
+		if RST='1' then
+			CARRY <= '0';
+		else
+			if rising_edge(CLK) then
+				CARRY <= ENTRADA_NZVC(0);
+			end if;
+		end if;
+	end process;
 
 end Behavioral;
+

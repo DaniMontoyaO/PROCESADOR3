@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    17:31:27 04/25/2016 
+-- Create Date:    15:51:30 10/16/2016 
 -- Design Name: 
 -- Module Name:    RF - Behavioral 
 -- Project Name: 
@@ -31,32 +31,39 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity RF is
-	 Port ( Rs1 : in  STD_LOGIC_VECTOR (4 downto 0);
-           Rs2 : in  STD_LOGIC_VECTOR (4 downto 0);
-           Rsd : in  STD_LOGIC_VECTOR (4 downto 0);
-           datawrite : in  STD_LOGIC_VECTOR (31 downto 0);
-           CRs1 : out  STD_LOGIC_VECTOR (31 downto 0);
-           CRs2 : out  STD_LOGIC_VECTOR (31 downto 0);
-			  rst: in STD_LOGIC);
+
+Port (	RS1: in  STD_LOGIC_VECTOR (4 downto 0);
+         RS2 : in  STD_LOGIC_VECTOR (4 downto 0);
+			DW: in STD_LOGIC_VECTOR (31 downto 0);
+			RST : in  STD_LOGIC;
+         RD : in  STD_LOGIC_VECTOR (4 downto 0);
+			CRS1: out  STD_LOGIC_VECTOR (31 downto 0);
+			CRS2: out  STD_LOGIC_VECTOR (31 downto 0));
 end RF;
 
-architecture Behavioral of RF is
-	type ram is array (0 to 39) of std_logic_vector (31 downto 0);                 
-    signal registro : ram := (others =>"00000000000000000000000000000000"); 
+architecture arq_registerfile of RF is
+
+	type ram_type is array (0 to 39) of std_logic_vector (31 downto 0);
+	signal registros : ram_type :=(others => "00000000000000000000000000000000");
+
 begin
-	process(Rs1,Rs2,Rsd,datawrite,rst)
-			begin	
-					if(rst = '1')then
-						Crs1 <= (others => '0');
-						Crs2 <= (others => '0');
-						registro <=(others =>"00000000000000000000000000000000");
-					else
-						Crs1 <= registro(conv_integer(Rs1));
-						Crs2 <= registro(conv_integer(Rs2));
-						if (rsd /= "00000")then
-								registro(conv_integer(Rsd))<= datawrite;
-						end if;
-					end if;
-		end process;
-end Behavioral;
+process(RS1,RS2, DW, RST, RD)
+begin
+	if(RST = '1')then
+				CRS1 <= "00000000000000000000000000000000";
+				CRS2 <= "00000000000000000000000000000000";
+			
+				registros <= (others => "00000000000000000000000000000000");
+			else
+				CRS1 <= registros(conv_integer(RS1));
+				CRS2 <= registros(conv_integer(RS2));
+				
+				if(RD /= "000000")then
+					registros(conv_integer(RD)) <= DW;
+				end if;
+			end if;
+	
+end process; 
+
+end arq_registerfile;
 

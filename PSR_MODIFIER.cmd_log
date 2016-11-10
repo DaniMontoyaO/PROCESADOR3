@@ -1,0 +1,1 @@
+vhdtdtfi -prj ProcesadorMonociclo -o C:/Users/Propietario_/Arquitectura-de-Computadores/ProcesadorMonociclo3/PSR_MODIFIER.vhi -module PSR_MODIFIER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work PSR_MODIFIER.vhd 

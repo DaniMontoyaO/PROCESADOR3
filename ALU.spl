@@ -1,0 +1,7 @@
+[Inputs]
+=ENTRADA_CRS1[31:0]=
+=ENTRADA_CRS2[31:0]=
+=OPERADOR_UC[5:0]=
+[Outputs]
+=SALIDA_ALU[31:0]=
+[BiDir]

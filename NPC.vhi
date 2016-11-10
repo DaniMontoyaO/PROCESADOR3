@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file NPC.vhd -- 19:21:18 04/25/2016
+-- VHDL Instantiation Created from source file NPC.vhd -- 18:12:55 10/17/2016
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,18 +8,18 @@
 
 	COMPONENT NPC
 	PORT(
-		Direccion : IN std_logic_vector(31 downto 0);
-		Reset : IN std_logic;
-		Clock : IN std_logic;          
-		NuevaDireccion : OUT std_logic_vector(31 downto 0)
+		ENTRADA_ADD : IN std_logic_vector(31 downto 0);
+		CLK : IN std_logic;
+		RST : IN std_logic;          
+		SALIDA_NPC : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
 
 	Inst_NPC: NPC PORT MAP(
-		Direccion => ,
-		NuevaDireccion => ,
-		Reset => ,
-		Clock => 
+		ENTRADA_ADD => ,
+		CLK => ,
+		RST => ,
+		SALIDA_NPC => 
 	);
 
 

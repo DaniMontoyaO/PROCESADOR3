@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "E:/final/Procesador_AMD_FULL_isim_beh.exe" -prj "E:/final/Procesador_AMD_FULL_beh.prj" "work.Procesador_AMD_FULL" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Propietario_/Arquitectura-de-Computadores/ProcesadorMonociclo3/tb_procesador2_isim_beh.exe" -prj "C:/Users/Propietario_/Arquitectura-de-Computadores/ProcesadorMonociclo3/tb_procesador2_beh.prj" "work.tb_procesador2" 

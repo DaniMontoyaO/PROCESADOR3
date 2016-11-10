@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file RF.vhd -- 23:35:58 04/25/2016
+-- VHDL Instantiation Created from source file RF.vhd -- 18:13:32 10/17/2016
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,24 +8,24 @@
 
 	COMPONENT RF
 	PORT(
-		Rs1 : IN std_logic_vector(4 downto 0);
-		Rs2 : IN std_logic_vector(4 downto 0);
-		Rsd : IN std_logic_vector(4 downto 0);
-		datawrite : IN std_logic_vector(31 downto 0);
-		rst : IN std_logic;          
-		CRs1 : OUT std_logic_vector(31 downto 0);
-		CRs2 : OUT std_logic_vector(31 downto 0)
+		RS1 : IN std_logic_vector(4 downto 0);
+		RS2 : IN std_logic_vector(4 downto 0);
+		DW : IN std_logic_vector(31 downto 0);
+		RST : IN std_logic;
+		RD : IN std_logic_vector(4 downto 0);          
+		CRS1 : OUT std_logic_vector(31 downto 0);
+		CRS2 : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
 
 	Inst_RF: RF PORT MAP(
-		Rs1 => ,
-		Rs2 => ,
-		Rsd => ,
-		datawrite => ,
-		CRs1 => ,
-		CRs2 => ,
-		rst => 
+		RS1 => ,
+		RS2 => ,
+		DW => ,
+		RST => ,
+		RD => ,
+		CRS1 => ,
+		CRS2 => 
 	);
 
 
